@@ -10,7 +10,7 @@ RUN python3 -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
 RUN --mount=type=cache,target=/root/.cache/pip \
-  pip install \
+  pip install --no-cache-dir \
   numpy \
   torch \
   torchvision \
